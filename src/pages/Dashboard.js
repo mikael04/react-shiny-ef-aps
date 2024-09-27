@@ -66,56 +66,81 @@ const Dashboard = () => {
   return (
     <Container className="mt-5 pt-4"> 
       {/* Value Boxes */}
-      <Row className="mt-4">
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center value-box-first">
-            <Card.Body>
-                <Card.Title className="card-title-first">APS em números</Card.Title> 
-                <Card.Text className="card-text-first">(dados de 08/2023)</Card.Text> 
-            </Card.Body>    
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>57000</Card.Title>
-              <Card.Text>Equipes de saúde da família</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>$89K</Card.Title>
-              <Card.Text>Equipes de atenção primária à saúde</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>89%</Card.Title>
-              <Card.Text>Growth</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>345</Card.Title>
-              <Card.Text>Feedbacks</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>12</Card.Title>
-              <Card.Text>Regions</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <div className="grid-container">
+      {/* Large Card */}
+      <div className="large-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title className="card-title-first">APS em números</Card.Title>
+            <Card.Text className="card-text-first">(dados de 08/2023)</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      {/* Small Cards */}
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>57000</Card.Title>
+            <Card.Text>Equipes de saúde da família</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>$89K</Card.Title>
+            <Card.Text>Equipes de atenção primária à saúde</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>89%</Card.Title>
+            <Card.Text>Growth</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>345</Card.Title>
+            <Card.Text>Feedbacks</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>12</Card.Title>
+            <Card.Text>Regions</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>7500</Card.Title>
+            <Card.Text>Another Metric</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+
+      <div className="small-card">
+        <Card className="text-center h-100">
+          <Card.Body>
+            <Card.Title>XYZ</Card.Title>
+            <Card.Text>Additional Info</Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+</div>                
 
       {/* Informational Text */}
       <div className="info-text">
