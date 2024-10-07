@@ -1,16 +1,15 @@
 /* src/App.css */
-
 /* Adjust top padding to accommodate fixed navbar */
 body {
   background-color: #0762AE; /* Para browser q não suportem gradiente */    
   background-image: linear-gradient(#0260A6, #00A0AB);
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Optional: Style for iframe container */
 .iframe-container {
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
+  margin-top: 1%;
+  padding-top: 3%;
   overflow: hidden;
 }
 

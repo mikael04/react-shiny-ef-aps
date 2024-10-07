@@ -4,23 +4,23 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const AnotherPage = () => {
+const Dashboard = () => {
   return (
-    <Container className="mt-5 pt-4 text-center">
+    <Container fluid className="p-0 m-0 vh-100 d-flex flex-column">
       
       {/* iFrame to Another Application */}
-      <div className="iframe-container mb-4">
+      <div className="iframe-container flex-grow-1">
         <iframe 
-        src="https://monitoraps.org/shiny.ef.aps.d  ashboard/"  // Replace with your application's URL
-        // src="http://127.0.0.1:4000/"  // Replace with your application's URL
+          // src="https://monitoraps.org/shiny.ef.aps.dashboard/"  // Replace with your application's URL
+          src="http://127.0.0.1:4000/"  // Replace with your application's URL
           title="External Application"
           width="100%"
-          height="500px"
-          style={{ border: "none" }}
+          height="100%"
+          style={{ border: "none", flexGrow: 1 }}
         ></iframe>
       </div>
     </Container>        
   );
 };
 
-export default AnotherPage;     
+export default Dashboard;     
