@@ -64,98 +64,90 @@ const Home = () => {
   };
 
   return (
-    <Container className="mt-5 pt-4"> 
+    <Container className="pt-4"> 
       {/* Value Boxes */}
-      <Row className="mt-4">
-        <Col md={4} sm={8} xs={12} className="mb-3">
-          <Card className="text-center value-box-first" style={{ height: '100%' }}>
-            <Card.Body>
+      <Row className="align-items-stretch">
+        {/* Left Side: Large Card */}
+        <Col md={4} className="mb-3 d-flex">
+          <Card className="text-center flex-fill large-card value-box-first">
+            <Card.Body className="d-flex flex-column justify-content-center">
               <Card.Title className="card-title-first">APS em números</Card.Title>
               <Card.Text className="card-text-first">(dados de 08/2023)</Card.Text>
             </Card.Body>
           </Card>
         </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>57000</Card.Title>
-              <Card.Text>Equipes de saúde da família</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>$89K</Card.Title>
-              <Card.Text>Equipes de atenção primária à saúde</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>89%</Card.Title>
-              <Card.Text>Growth</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>345</Card.Title>
-              <Card.Text>Feedbacks</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>12</Card.Title>
-              <Card.Text>Regiões</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>57000</Card.Title>
-              <Card.Text>Equipes de saúde da família</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>$89K</Card.Title>
-              <Card.Text>Equipes de atenção primária à saúde</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>89%</Card.Title>
-              <Card.Text>Growth</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>345</Card.Title>
-              <Card.Text>Feedbacks</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={2} sm={4} xs={6} className="mb-3">
-          <Card className="text-center">
-            <Card.Body>
-              <Card.Title>12</Card.Title>
-              <Card.Text>Regions</Card.Text>
-            </Card.Body>
-          </Card>
+
+        {/* Small Cards on the Right */}
+        <Col md={8}>
+          <Row>
+            {/* First Row of Small Cards */}
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>57000</Card.Title>
+                  <Card.Text>Equipes de saúde da família</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>$89K</Card.Title>
+                  <Card.Text>Equipes de atenção primária à saúde</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>89%</Card.Title>
+                  <Card.Text>Crescimento</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>Card 4</Card.Title>
+                  <Card.Text>Outro dado</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Second Row of Small Cards */}
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>Card 5</Card.Title>
+                  <Card.Text>Pequeno card 5</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>Card 6</Card.Title>
+                  <Card.Text>Pequeno card 6</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>Card 7</Card.Title>
+                  <Card.Text>Pequeno card 7</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={3} sm={6} xs={12} className="mb-3">
+              <Card className="text-center h-100">
+                <Card.Body>
+                  <Card.Title>Card 8</Card.Title>
+                  <Card.Text>Pequeno card 8</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Col>
       </Row>
 

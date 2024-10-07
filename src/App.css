@@ -38,12 +38,12 @@ body {
   color: #6c757d;
 }
 /* Ajustando primeiro card com nome */
-.card-title-first   {
-  font-size: 1.3rem;
+.card-title-first {
+  font-size: 1.75rem;
   color: #ffffff; 
 }
-.card-text-first   {
-  font-size: 0.8rem;
+.card-text-first {
+  font-size: 1rem;
   color: #ffffff; 
 }
 .value-box-first {

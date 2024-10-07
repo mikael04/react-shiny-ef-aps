@@ -1,0 +1,45 @@
+/* Navbar.css */
+
+.navbar-style {
+background-color: transparent;
+}
+
+.nav-link {
+    color: white !important;
+    margin-right: 20px;
+    transition: background-color 0.3s, padding 0.3s, border-radius 0.3s;
+    font-size: 1.1rem; /* Increases font size */
+    padding: 12px 24px; /* Increases padding for bigger buttons */
+    display: inline-block; /* Ensures padding affects the button size properly */
+}
+
+.nav-link:last-child {
+    margin-right: 0; /* Remove right margin for the last link */
+}
+
+.nav-link.active {
+    background-color: #FF8A00;
+    padding: 12px 24px; /* Consistent padding for active state */
+    border-radius: 10px;
+    font-size: 1.1rem; /* Ensures active state text size matches */
+    color: white; /* Ensures active state text remains white */
+}
+/* Optional: Add hover effect for better UX */
+.nav-link:hover {
+    background-color: rgba(208, 123, 0, 0.8); /* Slightly transparent on hover */
+    color: white; /* Maintains white text on hover */
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 1rem; /* Slightly smaller font on smaller screens */
+    padding: 10px 20px; /* Adjust padding */
+    margin-right: 15px; /* Adjust margin */
+  }
+
+  .nav-link.active {
+    padding: 10px 20px;
+  }
+}
