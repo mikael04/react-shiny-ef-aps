@@ -13,12 +13,16 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <NavbarComponent />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/another" element={<AnotherPage />} />
-      </Routes>
+      <div className="app-container d-flex flex-column vh-100">
+        <NavbarComponent />
+        <div className="flex-grow-1 overflow-hidden">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/another" element={<AnotherPage />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }

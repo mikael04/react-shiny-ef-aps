@@ -5,6 +5,11 @@ body {
   background-image: linear-gradient(#0260A6, #00A0AB);
   padding: 0px;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 /* Optional: Style for iframe container */
 .iframe-container {
@@ -12,10 +17,17 @@ body {
   padding-top: 3%;
   overflow: hidden;
 }
+.iframe-sizing{
+  width: 98%;
+  height: 90%;
+  border: none;
+  flex-grow: 1;
+  padding-bottom: 2.5%;
+}
 
 /* Optional: Custom styles for value boxes */
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
   font-weight: bold;
 }
 
@@ -70,4 +82,23 @@ body {
 }
 .texto-fonte{
   font-size: 10pt;
+}
+/* Ajustando tamanho do container (espaçamento extra lateral) */
+.container-fluid{
+  margin: 0px;
+  padding: 1% !important;
+}
+/* Ajustando barra de scroll duplicada na dashboard */
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.app-container .flex-grow-1 {
+  overflow: hidden; /* Prevent outer scrollbar */
+  padding-top: 0px !important;
+  margin-top: 0px !important;
 }
