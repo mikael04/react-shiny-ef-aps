@@ -11,15 +11,16 @@ const AnotherPage = () => {
       {/* iFrame to Another Application */}
       <div className="iframe-container mb-4">
         <iframe 
-          src="https://localhost:3838/shiny.ef.aps/"  // Replace with your application's URL
+        src="https://monitoraps.org/shiny.ef.aps.d  ashboard/"  // Replace with your application's URL
+        // src="http://127.0.0.1:4000/"  // Replace with your application's URL
           title="External Application"
           width="100%"
           height="500px"
           style={{ border: "none" }}
         ></iframe>
       </div>
-    </Container>
+    </Container>        
   );
 };
 
-export default AnotherPage;
+export default AnotherPage;     

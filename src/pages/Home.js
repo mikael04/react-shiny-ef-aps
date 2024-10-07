@@ -113,7 +113,7 @@ const Home = () => {
           <Card className="text-center">
             <Card.Body>
               <Card.Title>12</Card.Title>
-              <Card.Text>Regions</Card.Text>
+              <Card.Text>Regiões</Card.Text>
             </Card.Body>
           </Card>
         </Col>
