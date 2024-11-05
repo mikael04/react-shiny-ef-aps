@@ -10,7 +10,7 @@ html, body {
   padding: 0;
   overflow-y: auto; 
 }
-
+/* Ajustando margens */
 /* Or using regular CSS */
 @media (min-width: 576px) {
   .container {
@@ -40,6 +40,11 @@ html, body {
   .container {
     max-width: 1400px; /* Changed from default 1320px */
   }
+}
+/* Botão do painel interativo */
+.botao-painel-interativo{
+  --bs-btn-bg: #FF8900 !important;
+  --bs-btn-border-color: #FF8900 !important;
 }
 
 /* Optional: Style for iframe container */

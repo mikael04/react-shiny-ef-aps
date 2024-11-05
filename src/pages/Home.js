@@ -11,6 +11,7 @@ import imgResPortePop from '../assets/graphs/fig_efi_resultados_porte_pop.png';
 import imgEvDesp from '../assets/graphs/fig_evolucao_desp.png';
 import imgEvPrev from '../assets/graphs/fig_evolucao_previne.png';
 import imgMorbiMort from '../assets/graphs/fig_morbimortalidade.png';
+import graphIcon from '../assets/images/graph-icon.svg';
 
 Chart.register(...registerables); // Register Chart.js components
 
@@ -178,11 +179,23 @@ const Home = () => {
       </div>
 
       {/* Centered Button */}
-      <div className="text-center mb-4">
-        <Button variant="primary" href="/dashboard">Ir para o Painel Interativo</Button>
-      </div>
+        <div className="text-center mb-4 ">
+          <Button variant="primary" href="/dashboard" className="botao-painel-interativo">
+            Ir para o Painel interativo
+            <img 
+              src={graphIcon} 
+              alt="graph icon" 
+              className="ms-2" 
+              style={{  
+              width: '18px', 
+              height: '18px',
+              verticalAlign: 'middle'
+              }} 
+            />
+          </Button>
+        </div>
 
-      {/* Gráficos PNG */}
+        {/* Gráficos PNG */}
       {/* Primeira linha */}
       <Row>
         <Col md={6} className="mb-4">
@@ -203,6 +216,7 @@ const Home = () => {
           <Card>
             <Card.Body>
             <Card.Title>Evolução dos indicadores de desempenho da APS</Card.Title>
+              
               <img 
                 src={imgEvPrev}
                 alt="Evolução Previne Brasil" 
@@ -270,7 +284,7 @@ const Home = () => {
                   <img 
                     src={imgResPortePop}
                     alt="Evolução da eficiência de Resultados por Porte Populacional" 
-                    classNam  e="img-fluid" 
+                    className="img-fluid" 
                   />
                   <p>Em geral, municípios com menos de 20 mil habitantes foram os mais eficientes em resultados. Na comparação entre todos os 5570 municípios. Ou seja, em média, eles apresentaram menores taxas de mortalidade e internações por CSAP diante da despesa mensal por equipe da APS investida.</p>
                 </Col>
