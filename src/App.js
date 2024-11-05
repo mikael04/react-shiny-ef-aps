@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="app-container d-flex flex-column vh-100">
         <NavbarComponent />
-        <div className="flex-grow-1 overflow-hidden">
+        <div className="">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />

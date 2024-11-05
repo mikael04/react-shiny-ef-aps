@@ -8,7 +8,38 @@ body {
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  overflow-y: auto; 
+}
+
+/* Or using regular CSS */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px; /* Changed from default 1320px */
+  }
 }
 
 /* Optional: Style for iframe container */
