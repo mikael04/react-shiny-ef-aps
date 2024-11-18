@@ -4,7 +4,7 @@ import React from 'react';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import './NavbarComponent.css';  // Import the CSS file
-import logo from '../assets/logos/logo-monitoraps-parceiros.svg'; // Import the logo
+import logo from '../assets/logos/logo-monitoraps-parceiros-2.svg'; // Import the logo
 
 const NavbarComponent = () => {
   return (

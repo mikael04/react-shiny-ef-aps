@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { Line, Bar } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 import imgEfProcIvs from '../assets/graphs/fig_efi_processos_ivs.png';
 import imgProcPortePop from '../assets/graphs/fig_efi_processos_porte_pop.png';
@@ -12,64 +11,12 @@ import imgEvDesp from '../assets/graphs/fig_evolucao_desp.png';
 import imgEvPrev from '../assets/graphs/fig_evolucao_previne.png';
 import imgMorbiMort from '../assets/graphs/fig_morbimortalidade.png';
 import graphIcon from '../assets/images/graph-icon.svg';
+import footerLogo from '../assets/logos/logo-monitoraps-parceiros-2.svg';
+
 
 Chart.register(...registerables); // Register Chart.js components
 
 const Home = () => {
-  // // Data for Line Chart
-  // const lineData = {
-  //   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-  //   datasets: [{
-  //     label: 'Sales',
-  //     data: [120, 150, 180, 170, 190, 220, 240],
-  //     backgroundColor: 'rgba(54, 162, 235, 0.2)',
-  //     borderColor: 'rgba(54, 162, 235, 1)',
-  //     borderWidth: 2,
-  //     fill: true,
-  //     tension: 0.4
-  //   }]
-  // };
-
-  // const lineOptions = {
-  //   responsive: true, 
-  //   plugins: {
-  //     legend: { position: 'top' },
-  //     title: { display: true, text: 'Monthly Sales' }
-  //   }
-  // };
-
-  // // Data for Bar Chart
-  // const barData = {
-  //   labels: ['Product A', 'Product B', 'Product C', 'Product D'],
-  //   datasets: [{
-  //     label: 'Units Sold',
-  //     data: [50, 75, 150, 100],
-  //     backgroundColor: [
-  //       'rgba(255, 99, 132, 0.2)',
-  //       'rgba(255, 206, 86, 0.2)',
-  //       'rgba(75, 192, 192, 0.2)',
-  //       'rgba(153, 102, 255, 0.2)'
-  //     ],
-  //     borderColor: [
-  //       'rgba(255,99,132,1)',
-  //       'rgba(255, 206, 86, 1)',
-  //       'rgba(75, 192, 192, 1)',
-  //       'rgba(153, 102, 255, 1)'
-  //     ],
-  //     borderWidth: 1
-  //   }]
-  // };
-
-  // const barOptions = {
-  //   responsive: true,
-  //   plugins: {
-  //     legend: { position: 'top' },
-  //     title: { display: true, text: 'Product Performance' }
-  //   },
-  //   scales: {
-  //     y: { beginAtZero: true }
-  //   }
-  // };
 
   return (
     <Container className="pt-4"> 
@@ -199,30 +146,28 @@ const Home = () => {
       {/* Primeira linha */}
       <Row>
         <Col md={6} className="mb-4">
-          <Card>
-            <Card.Body>              
-            <Card.Title>Evolução da despesa em APS pelos municípios</Card.Title>
+          <Card className="h-100 d-flex flex-column">
+            <Card.Body className="d-flex flex-column">
+              <Card.Title>Evolução da despesa em APS pelos municípios</Card.Title>
               <img 
                 src={imgEvDesp} 
                 alt="Eficiência da despesa em APS" 
                 className="img-fluid" 
               />
-              <p>No terceiro quadrimestre de 2023 foram investidos quase 40 bilhões de reais, com a maior parte sendo originada de recurso próprio dos municípios.</p>
-              <div className="mb-4"></div>  
+              <p className="mt-auto">No terceiro quadrimestre de 2023 foram investidos quase 40 bilhões de reais, com a maior parte sendo originada de recurso próprio dos municípios.</p>
             </Card.Body>
           </Card>
         </Col>
         <Col md={6} className="mb-4">
-          <Card>
-            <Card.Body>
-            <Card.Title>Evolução dos indicadores de desempenho da APS</Card.Title>
-              
+          <Card className="h-100 d-flex flex-column">
+            <Card.Body className="d-flex flex-column">
+              <Card.Title>Evolução dos indicadores de desempenho da APS</Card.Title>
               <img 
                 src={imgEvPrev}
                 alt="Evolução Previne Brasil" 
                 className="img-fluid" 
               />
-              <p>Os indicadores de desempenho da APS estavam em uma tendência crescente até o 2º quadrimestre de 2023. Aparentemente houve uma certa estabilização para a maioria deles nos quadrimestre posteriores, com exceção do indicador de vacinação.</p>
+              <p className="mt-auto">Os indicadores de desempenho da APS estavam em uma tendência crescente até o 2º quadrimestre de 2023. Aparentemente houve uma certa estabilização para a maioria deles nos quadrimestre posteriores, com exceção do indicador de vacinação.</p>
             </Card.Body>
           </Card>
         </Col>
@@ -233,12 +178,23 @@ const Home = () => {
         <Col md={12} className="mb-4">
           <Card>
             <Card.Body>
-            <Card.Title>Evolução da morbimortalidade por CSAP</Card.Title>
-              <img 
-                src={imgMorbiMort}
-                alt="Taxa de Mortalidade e Internações por CSAP (Brasil)" 
-                className="img-fluid" 
-              />            
+              <Card.Title className="text-center">Evolução da morbimortalidade por CSAP</Card.Title>
+              <Row>
+                <Col md={6}>    
+                  <img 
+                    src={imgMorbiMort}
+                    alt="Taxa de Mortalidade e Internações por CSAP (Brasil)" 
+                    className="img-fluid" 
+                  />  
+                </Col>
+                <Col md={6}>
+                  <p>
+                    A Atenção Primária à Saúde (APS) no Brasil compõe um dos principais conjuntos de ações e serviços ofertados na
+                    rede de atenção no país a partir de um investimento de quase 100 bilhões de reais* ao ano. Contudo, a sua
+                    organização, estrutura, processos e resultados são muito diferentes entre os municípios brasileiros.
+                  </p>
+                </Col>
+              </Row>      
             </Card.Body>
           </Card>
         </Col>
@@ -249,7 +205,7 @@ const Home = () => {
         <Col md={12} className="mb-4">
           <Card>
             <Card.Body> 
-              <Card.Title>Evolução da eficiência de processos</Card.Title>
+              <Card.Title className="text-center">Evolução da eficiência de <span class="ef-title-graphs">PROCESSOS</span></Card.Title>
               <Row>
                 <Col md={6}>
                   <img 
@@ -257,7 +213,7 @@ const Home = () => {
                     alt="Evolução da eficiência de Processos por Porte Populacional" 
                     className="img-fluid" 
                   />
-                  <p>Já para o IVS, não há uma associação nítida da vulnerabilidade social e da eficiência de resultados. </p>
+                  <p>Em geral, municípios com menos de 20 mil habitantes foram os mais eficientes em resultados. Na comparação entre todos os 5570 municípios. Ou seja, em média, eles apresentaram menores taxas de mortalidade e internações por CSAP diante da despesa mensal por equipe da APS investida. </p>
                 </Col>
                 <Col md={6}>
                   <img 
@@ -265,7 +221,7 @@ const Home = () => {
                     alt="Evolução da eficiência de Processos IVS" 
                     className="img-fluid" 
                   />
-                  <p>Em geral, municípios com menos de 20 mil habitantes foram os mais eficientes em resultados. Na comparação entre todos os 5570 municípios. Ou seja, em média, eles apresentaram menores taxas de mortalidade e internações por CSAP diante da despesa mensal por equipe da APS investida. </p>
+                  <p>Já para o IVS, não há uma associação nítida da vulnerabilidade social e da eficiência de resultados. </p>
                 </Col>
               </Row>
             </Card.Body>
@@ -278,7 +234,7 @@ const Home = () => {
         <Col md={12} className="mb-4">
           <Card>
             <Card.Body> 
-              <Card.Title>Evolução da eficiência de resultados</Card.Title>
+              <Card.Title className="text-center">Evolução da eficiência de <span class="ef-title-graphs">RESULTADOS</span></Card.Title>
               <Row>
                 <Col md={6}>
                   <img 
@@ -300,24 +256,16 @@ const Home = () => {
             </Card.Body>
           </Card>
         </Col>
-      </Row> 
-      {/* Charts */}
-                {/* <Row>
-        <Col md={6} className="mb-4">
-          <Card>
-            <Card.Body>
-              <Line data={lineData} options={lineOptions} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6} className="mb-4">
-          <Card>
-            <Card.Body>
-              <Bar data={barData} options={barOptions} />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row> */}
+      </Row>
+      {/* Footer */}
+      <footer className="text-center mt-4 footer-logo">
+        <img 
+          src={footerLogo} 
+          alt="Footer Logo" 
+          className="img-fluid" 
+          height="50"
+        />
+      </footer>
     </Container> 
   );
 };
