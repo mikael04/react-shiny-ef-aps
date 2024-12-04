@@ -11,7 +11,7 @@ import imgEvDesp from '../assets/graphs/fig_evolucao_desp.png';
 import imgEvPrev from '../assets/graphs/fig_evolucao_previne.png';
 import imgMorbiMort from '../assets/graphs/fig_morbimortalidade.png';
 import graphIcon from '../assets/images/graph-icon.svg';
-import footerLogo from '../assets/logos/logo-monitoraps-parceiros-2.svg';
+import footerLogo from '../assets/logos/logo-monitoraps-parceiros.svg';
 
 
 Chart.register(...registerables); // Register Chart.js components
@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <Container className="pt-4"> 
       {/* Value Boxes */}
-      <Row className="align-items-stretch">
+      <Row className="align-items-stretch value-box-shiny">
         {/* Left Side: Large Card */}
         <Col md={4} className="mb-3 d-flex">
           <Card className="text-center flex-fill large-card value-box-first">

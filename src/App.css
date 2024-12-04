@@ -61,15 +61,22 @@ html, body {
   padding-bottom: 2.5%;
 }
 
-/* Optional: Custom styles for value boxes */
+/* Definindo a cor para o texto da value-box */
+:root {
+  --main-value-box-color: #3861A2; /* Define a custom property */
+  --main-value-box-subtitle-color: #6c757d; /* Define a custom property */
+}
+
+/* Optional: Modificando value-boxes */
 .card-title {
   font-size: 1.5rem;  
   font-weight: bold;
+  color: var(--main-value-box-color);
 }
 
 .card-text {
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--main-value-box-subtitle-color);
 }
 .value-box {
   background-color: #ffffff;
@@ -87,13 +94,14 @@ html, body {
 }
 /* Ajustando primeiro card com nome */
 .card-title-first {
-  font-size: 1.75rem;
-  color: #ffffff; 
+  font-size: 2.7rem; /*1.75rem; 2.7rem; */
+  color: var(--main-value-box-color);
 }
 .card-text-first {
   font-size: 1rem;
-  color: #ffffff; 
+  color: var(--main-value-box-subtitle-color);
 }
+/* V1 c/ fundo da "caixa" de título transparente"
 .value-box-first {
   background-color: transparent;
   padding: 20px;
@@ -102,6 +110,20 @@ html, body {
   border: 0;
   color: white;
 }
+/* Alterando padrão da value-box
+.value-box-shiny{
+  border: 2px solid white;
+  padding: 20px 5px 5px 1px;
+  border-radius: 15px;
+}*/
+
+/* V2 c/ fundo igual as demais caixas e título Azul */
+.value-box-first {
+  background-color: #ffffff;
+  text-align: center;
+  border: 0;
+} 
+
 .info-text {
   margin: 40px 0;
   text-align: center;
@@ -138,9 +160,11 @@ html, body {
   padding-top: 0px !important;
   margin-top: 0px !important;
 }
+/* Alterando parte do título dos gráficos */
 .ef-title-graphs{
   color:#FF8900;
 }
+/* Arrumando posicionamento do footer */
 .footer-logo{
   padding-bottom: 1vw;
 }

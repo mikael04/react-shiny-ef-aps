@@ -1,10 +1,10 @@
 // src/components/NavbarComponent.js
 
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, Dropdown } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import './NavbarComponent.css';  // Import the CSS file
-import logo from '../assets/logos/logo-monitoraps-parceiros-2.svg'; // Import the logo
+import logo from '../assets/logos/logo-monitoraps-parceiros.svg'; // Import the logo
 
 const NavbarComponent = () => {
   return (
@@ -21,23 +21,31 @@ const NavbarComponent = () => {
       </Row>
       <Row>
         <Col>
-        <Navbar className="navbar navbar-expand-lg navbar-style justify-content-center" expand="lg">
-          <Navbar.Toggle aria-controls="navbarNav" />
-          <Navbar.Collapse id="navbarNav">
-            <Nav className="mx-auto d-flex align-items-center">
-              <Nav.Link as={NavLink} to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link' }>
-                SOBRE
-              </Nav.Link>
+          <Navbar className="navbar navbar-expand-lg navbar-style justify-content-center" expand="lg">
+            <Navbar.Toggle aria-controls="navbarNav" />
+            <Navbar.Collapse id="navbarNav">
+              <Nav className="mx-auto d-flex align-items-center">
+                <Nav.Link as={NavLink} to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link' }>
+                  INÍCIO
+                </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/dashboard" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link' }>
-                PAINEL DE EFICIÊNCIA
-              </Nav.Link>
+                <Nav.Link as={NavLink} to="/dashboard" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link' }>
+                  PAINEL DE EFICIÊNCIA
+                </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/another" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link' }>
-                RELATÓRIOS
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+                <Dropdown>
+                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                    SOBRE
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item as={NavLink} to="/projeto">O projeto</Dropdown.Item>
+                    <Dropdown.Item as={NavLink} to="/metodologia">A metodologia</Dropdown.Item>
+                    <Dropdown.Item as={NavLink} to="/equipe">A equipe</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Nav>
+            </Navbar.Collapse>
           </Navbar>
         </Col>
       </Row>
@@ -45,4 +53,4 @@ const NavbarComponent = () => {
   );
 };
 
-export default NavbarComponent;     
+export default NavbarComponent;
