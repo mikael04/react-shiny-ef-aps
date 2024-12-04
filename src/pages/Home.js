@@ -16,6 +16,13 @@ import footerLogo from '../assets/logos/logo-monitoraps-parceiros.svg';
 
 Chart.register(...registerables); // Register Chart.js components
 
+/**
+ * Home component renders the main page layout with various sections including value boxes, informational text, 
+ * interactive button, and multiple rows of cards displaying statistical data and graphs.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Home component.
+ */
 const Home = () => {
 
   return (

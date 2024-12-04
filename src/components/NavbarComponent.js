@@ -6,6 +6,18 @@ import { Link, NavLink } from 'react-router-dom';
 import './NavbarComponent.css';  // Import the CSS file
 import logo from '../assets/logos/logo-monitoraps-parceiros.svg'; // Import the logo
 
+/**
+ * NavbarComponent is a functional React component that renders a responsive navigation bar.
+ * It includes a logo, navigation links, and a dropdown menu.
+ *
+ * @component
+ * @example
+ * return (
+ *   <NavbarComponent />
+ * )
+ *
+ * @returns {JSX.Element} The rendered navigation bar component.
+ */
 const NavbarComponent = () => {
   return (
     <Container fluid className="p-0">
