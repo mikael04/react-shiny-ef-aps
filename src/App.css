@@ -1,28 +1,82 @@
 /* src/App.css */
-
 /* Adjust top padding to accommodate fixed navbar */
 body {
   background-color: #0762AE; /* Para browser q não suportem gradiente */    
   background-image: linear-gradient(#0260A6, #00A0AB);
-  padding: 20px;
+  padding: 0px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; 
+}
+/* Ajustando margens */
+/* Or using regular CSS */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px; /* Changed from default 1320px */
+  }
+}
+/* Botão do painel interativo */
+.botao-painel-interativo{
+  --bs-btn-bg: #FF8900 !important;
+  --bs-btn-border-color: #FF8900 !important;
 }
 
 /* Optional: Style for iframe container */
 .iframe-container {
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
+  margin-top: 1%;
+  padding-top: 3%;
   overflow: hidden;
 }
+.iframe-sizing{
+  width: 98%;
+  height: 90%;
+  border: none;
+  flex-grow: 1;
+  padding-bottom: 2.5%;
+}
 
-/* Optional: Custom styles for value boxes */
+/* Definindo a cor para o texto da value-box */
+:root {
+  --main-value-box-color: #3861A2; /* Define a custom property */
+  --main-value-box-subtitle-color: #6c757d; /* Define a custom property */
+}
+
+/* Optional: Modificando value-boxes */
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
   font-weight: bold;
+  color: var(--main-value-box-color);
 }
 
 .card-text {
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--main-value-box-subtitle-color);
 }
 .value-box {
   background-color: #ffffff;
@@ -39,14 +93,15 @@ body {
   color: #6c757d;
 }
 /* Ajustando primeiro card com nome */
-.card-title-first   {
-  font-size: 1.3rem;
-  color: #ffffff; 
+.card-title-first {
+  font-size: 2.7rem; /*1.75rem; 2.7rem; */
+  color: var(--main-value-box-color);
 }
-.card-text-first   {
-  font-size: 0.8rem;
-  color: #ffffff; 
+.card-text-first {
+  font-size: 1rem;
+  color: var(--main-value-box-subtitle-color);
 }
+/* V1 c/ fundo da "caixa" de título transparente"
 .value-box-first {
   background-color: transparent;
   padding: 20px;
@@ -55,6 +110,20 @@ body {
   border: 0;
   color: white;
 }
+/* Alterando padrão da value-box
+.value-box-shiny{
+  border: 2px solid white;
+  padding: 20px 5px 5px 1px;
+  border-radius: 15px;
+}*/
+
+/* V2 c/ fundo igual as demais caixas e título Azul */
+.value-box-first {
+  background-color: #ffffff;
+  text-align: center;
+  border: 0;
+} 
+
 .info-text {
   margin: 40px 0;
   text-align: center;
@@ -71,4 +140,31 @@ body {
 }
 .texto-fonte{
   font-size: 10pt;
+}
+/* Ajustando tamanho do container (espaçamento extra lateral) */
+.container-fluid{
+  margin: 0px;
+  padding: 1% !important;
+}
+/* Ajustando barra de scroll duplicada na dashboard */
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.app-container .flex-grow-1 {
+  overflow: hidden; /* Prevent outer scrollbar */
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+}
+/* Alterando parte do título dos gráficos */
+.ef-title-graphs{
+  color:#FF8900;
+}
+/* Arrumando posicionamento do footer */
+.footer-logo{
+  padding-bottom: 1vw;
 }
